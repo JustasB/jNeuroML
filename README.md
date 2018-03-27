@@ -14,8 +14,12 @@ jNeuroML can:
 Binary installation
 -------------------
 
-To get a precompiled binary for jNeuroML, go to https://github.com/NeuroML/jNeuroML/releases, download the latest **jNeuroML.zip** file and you have everything you need. Unzip on your local machine and go into the *jNeuroMLJar* directory.
-
+To get a precompiled binary for jNeuroML:
+ 1. Go to https://github.com/NeuroML/jNeuroML/releases and download the latest **jNeuroML.zip** file
+ 2. Unzip it to your local machine
+ 3. Add environment variable *JNML_HOME*, pointing to the root *jNeuroML* folder
+ 4. Add the location of the *jNeuroML* folder to the *PATH* variable. This and the previous step will ensure you can run the *jnml* utility from any folder.
+ 
 Usage
 -----
 
@@ -31,23 +35,24 @@ Export and import features for [NEURON](http://www.neuron.yale.edu/neuron/), [SB
 [Brian](http://www.briansimulator.org/) etc. are under active development (see https://github.com/NeuroML/org.neuroml.export 
 and https://github.com/NeuroML/org.neuroml.import).
 
-**Note:**
-
-Adding the environment variable *JNML_HOME*, pointing to the *jNeuroML* folder, as well as adding this path to the *PATH* variable will let you use the *jnml* utility from any folder.
-
 
 Getting the source for jNeuroML
 -------------------------------
 
 If you prefer to clone all of the individual repositories and build the jNeuroML application yourself, 
-use the [getNeuroML.py](https://github.com/NeuroML/jNeuroML/blob/master/getNeuroML.py) utility in the jNeuroML repo:
+use the [getNeuroML.py](https://github.com/NeuroML/jNeuroML/blob/master/getNeuroML.py) utility in the jNeuroML repo.
+
+Eensure you have:
+  - git
+  - [Java Development Kit (JDK)](http://www.oracle.com/technetwork/java/javase/downloads/index.html) and JAVA_HOME variable set (see [here for Ubuntu](https://askubuntu.com/a/175547/702527)).
+  - Maven: Download [here](http://maven.apache.org/) or use package managers for Linux (e.g. `sudo apt-get install maven`) or Mac (`brew install maven`)). 
 
     git clone git://github.com/NeuroML/jNeuroML.git neuroml_dev/jNeuroML
     cd neuroml_dev/jNeuroML
     python getNeuroML.py
 
 This will clone ~11 repos for NML2 & LEMS (including Python based libraries) into *neuroml_dev/* and compile 
-the Java based ones using Maven (download [here](http://maven.apache.org/) or use package managers for Linux (e.g. apt-get install maven) or Mac (brew install maven)). The full process may take 5-10 mins on first installation, but subsequently running:
+the Java based ones using Maven. The full process may take 5-10 mins on first installation, but subsequently running:
 
     git pull
     python getNeuroML.py
