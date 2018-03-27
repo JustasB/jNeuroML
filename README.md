@@ -45,7 +45,9 @@ use the [getNeuroML.py](https://github.com/NeuroML/jNeuroML/blob/master/getNeuro
 Eensure you have:
   - git
   - [Java Development Kit (JDK)](http://www.oracle.com/technetwork/java/javase/downloads/index.html) and JAVA_HOME variable set (see [here for Ubuntu](https://askubuntu.com/a/175547/702527)).
-  - Maven: Download [here](http://maven.apache.org/) or use package managers for Linux (e.g. `sudo apt-get install maven`) or Mac (`brew install maven`)). 
+  - Maven: Download [here](http://maven.apache.org/) or use package managers for Linux (e.g. `sudo apt-get install maven`) or Mac (`brew install maven`). 
+
+Then in terminal, run:
 
     git clone git://github.com/NeuroML/jNeuroML.git neuroml_dev/jNeuroML
     cd neuroml_dev/jNeuroML
